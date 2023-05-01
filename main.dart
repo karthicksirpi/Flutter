@@ -6,55 +6,76 @@ void main() {
   ));
 }
 
-class MyApp extends StatefulWidget {
-  // const MyApp({Key? key}) : super(key: key);
+// class MyApp extends StatefulWidget {
+//   // const MyApp({Key? key}) : super(key: key);
+//
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+//
+// class _MyAppState extends State<MyApp> {
+//   int count = 0;
+//   void increament() {
+//     setState(() {
+//       count++;
+//       print(count);
+//     });
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         floatingActionButton: FloatingActionButton(
+//           onPressed: increament,
+//           child: Icon(Icons.plus_one),
+//         ),
+//         appBar: AppBar(
+//           leading: IconButton(
+//             icon: Icon(Icons.menu),
+//             onPressed: increament,
+//           ),
+//           title: Text('My App'),
+//           actions: <Widget>[
+//             IconButton(
+//               icon: Icon(Icons.search),
+//               onPressed: () {
+//                 print("heellooooooooooo");
+//               },
+//             ),
+//             IconButton(
+//               icon: Icon(Icons.more),
+//               onPressed: () {
+//                 print("heellooooooooooo");
+//               },
+//             ),
+//           ],
+//         ),
+//         body: new Center(
+//           child: new Text(
+//             "the count is " + count.toString(),
+//             style: new TextStyle(fontSize: 30.0),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  int count = 0;
-  void increament() {
-    setState(() {
-      count++;
-      print(count);
-    });
-  }
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return MaterialApp(
       home: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: increament,
-          child: Icon(Icons.plus_one),
-        ),
         appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: increament,
-          ),
-          title: Text('My App'),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                print("heellooooooooooo");
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.more),
-              onPressed: () {
-                print("heellooooooooooo");
-              },
-            ),
-          ],
+          title: Text("STateless Widget"),
+          backgroundColor: Colors.pink,
         ),
-        body: new Center(
-          child: new Text(
-            "the count is " + count.toString(),
-            style: new TextStyle(fontSize: 30.0),
+        body: Center(
+          child: Text(
+            "Charan",
+            style: new TextStyle(fontSize: 70.0),
           ),
         ),
       ),
