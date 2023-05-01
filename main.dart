@@ -14,31 +14,49 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  int count = 0;
+  void increament() {
+    setState(() {
+      count++;
+      print(count);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {
-            print("heellooooooooooo");
-          },
+    return MaterialApp(
+      home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: increament,
+          child: Icon(Icons.plus_one),
         ),
-        title: Text('My App'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              print("heellooooooooooo");
-            },
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: increament,
           ),
-          IconButton(
-            icon: Icon(Icons.more),
-            onPressed: () {
-              print("heellooooooooooo");
-            },
+          title: Text('My App'),
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                print("heellooooooooooo");
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.more),
+              onPressed: () {
+                print("heellooooooooooo");
+              },
+            ),
+          ],
+        ),
+        body: new Center(
+          child: new Text(
+            "the count is " + count.toString(),
+            style: new TextStyle(fontSize: 30.0),
           ),
-        ],
+        ),
       ),
     );
   }
